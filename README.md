@@ -9,4 +9,10 @@ between the expanded and collapsed state.
 - once fully collapsed it will disable user input to the content
 - can slide in/out in all four directions
 - configurable animation duration
+
+ # Screen capture
+
  
+
+https://github.com/user-attachments/assets/1d52dc7e-74c5-4e31-a7bf-6ad067c3968f
+
