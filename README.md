@@ -11,8 +11,6 @@ between the expanded and collapsed state.
 - configurable animation duration
 
  # Screen capture
+(never mind the gif capture quality, the animation looks much smoother in the app itself)
 
- 
-
-https://github.com/user-attachments/assets/1d52dc7e-74c5-4e31-a7bf-6ad067c3968f
-
+![capture5](https://github.com/user-attachments/assets/10ff1cae-20ce-4c24-b5f1-15a0a0b6a8b2)
