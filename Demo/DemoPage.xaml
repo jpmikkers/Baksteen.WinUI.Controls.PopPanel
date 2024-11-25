@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="HeightAnimationTest.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:HeightAnimationTest"
+    xmlns:pp="using:Baksteen.WinUI.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="ThisPage"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Storyboard x:Name="HeightAnimation">
+            <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetName="MyPanel" Storyboard.TargetProperty="Height" EnableDependentAnimation="True">
+                <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="10"/>
+                <LinearDoubleKeyFrame Value="500" KeyTime="0:0:3" />
+            </DoubleAnimationUsingKeyFrames>-->
+            <!--<DoubleAnimation
+                EnableDependentAnimation="True"
+                Storyboard.TargetName="MyPanel"
+                Storyboard.TargetProperty="Height"
+                From="100"
+                To="200"
+                Duration="0:0:1">
+                <DoubleAnimation.EasingFunction>
+                    <BounceEase />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>-->
+            <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ThisPage" Storyboard.TargetProperty="SpecialHeight">
+                    <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="10"/>
+                    <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="100"/>
+                    <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="200"/>
+            </ObjectAnimationUsingKeyFrames>-->
+        </Storyboard>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel 
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+            Spacing="5"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Orientation="Vertical">
+
+            <pp:PopPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                IsExpanded="{Binding IsChecked, ElementName=expandToggleButton}"
+                ExpandDuration="0:0:0.2"
+                PopDirection="TopToBottom"
+                HorizontalAlignment="Center">
+                <Border BorderBrush="Azure" BorderThickness="1" Padding="10">
+                    <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right">
+                        <AppBarButton Icon="Add" Label="Add"/>
+                        <AppBarButton Icon="Edit" Label="Edit"/>
+                        <AppBarButton Icon="Share" Label="Share"/>
+                        <CommandBar.SecondaryCommands>
+                            <AppBarButton Icon="Setting" Label="Settings">
+                                <AppBarButton.KeyboardAccelerators>
+                                    <KeyboardAccelerator Modifiers="Control" Key="I" />
+                                </AppBarButton.KeyboardAccelerators>
+                            </AppBarButton>
+                            <AppBarButton Icon="Add" Label="Button 1">
+                                <AppBarButton.KeyboardAccelerators>
+                                    <KeyboardAccelerator Modifiers="Control" Key="N" />
+                                </AppBarButton.KeyboardAccelerators>
+                            </AppBarButton>
+                            <AppBarButton Icon="Delete" Label="Button 2">
+                                <AppBarButton.KeyboardAccelerators>
+                                    <KeyboardAccelerator Key="Delete" />
+                                </AppBarButton.KeyboardAccelerators>
+                            </AppBarButton>
+                            <AppBarSeparator />
+                            <AppBarButton Icon="FontDecrease" Label="Button 3">
+                                <AppBarButton.KeyboardAccelerators>
+                                    <KeyboardAccelerator Modifiers="Control" Key="Subtract" />
+                                </AppBarButton.KeyboardAccelerators>
+                            </AppBarButton>
+                            <AppBarButton Icon="FontIncrease" Label="Button 4">
+                                <AppBarButton.KeyboardAccelerators>
+                                    <KeyboardAccelerator Modifiers="Control" Key="Add" />
+                                </AppBarButton.KeyboardAccelerators>
+                            </AppBarButton>
+                        </CommandBar.SecondaryCommands>
+                    </CommandBar>
+                </Border>
+            </pp:PopPanel>
+
+            <TextBlock HorizontalAlignment="Center">This text is stacked below the poppanel</TextBlock>
+        </StackPanel>
+
+        <pp:PopPanel
+                Grid.Row="1"
+                Grid.Column="0"
+                ExpandDuration="0:0:0.3"
+                IsExpanded="{Binding IsChecked, ElementName=expandToggleButton}"
+                PopDirection="LeftToRight"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left">
+            <Button>Button in poppanel</Button>
+        </pp:PopPanel>
+
+        <ToggleButton 
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                x:Name="expandToggleButton">Toggle IsExpanded</ToggleButton>
+
+        <pp:PopPanel
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                ExpandDuration="0:0:0.4"
+                IsExpanded="{Binding IsChecked, ElementName=expandToggleButton}"
+                PopDirection="BottomToTop"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center">
+            <Button>Button in poppanel</Button>
+        </pp:PopPanel>
+
+        <pp:PopPanel
+                Grid.Row="1"
+                Grid.Column="2"
+                ExpandDuration="0:0:0.5"
+                IsExpanded="{Binding IsChecked, ElementName=expandToggleButton}"
+                PopDirection="RightToLeft"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right">
+            <Button>Button in poppanel</Button>
+        </pp:PopPanel>
+    </Grid>
+
+</Page>

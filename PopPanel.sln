@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baksteen.WinUI.Controls.PopPanel", "Baksteen.WinUI.Components.PopPanel\Baksteen.WinUI.Controls.PopPanel.csproj", "{6C82FA7E-45A1-4E2F-955D-4C84EDFC480B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{5F702CB6-0497-4C0A-8A18-273C57A9B652}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C82FA7E-45A1-4E2F-955D-4C84EDFC480B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C82FA7E-45A1-4E2F-955D-4C84EDFC480B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C82FA7E-45A1-4E2F-955D-4C84EDFC480B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C82FA7E-45A1-4E2F-955D-4C84EDFC480B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F702CB6-0497-4C0A-8A18-273C57A9B652}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{5F702CB6-0497-4C0A-8A18-273C57A9B652}.Debug|Any CPU.Build.0 = Debug|x64
+		{5F702CB6-0497-4C0A-8A18-273C57A9B652}.Release|Any CPU.ActiveCfg = Release|x64
+		{5F702CB6-0497-4C0A-8A18-273C57A9B652}.Release|Any CPU.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
